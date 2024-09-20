@@ -10,7 +10,7 @@ import streamlit.components.v1 as components
 st.title("Accident Data Analysis with QGIS Map Integration")
 
 # Sidebar menu
-st.sidebar.title("Navigation")
+st.sidebar.title("Admin")
 page = st.sidebar.selectbox("Choose a page", ["Upload Data", "QGIS Map"])
 
 if page == "Upload Data":
