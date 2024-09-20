@@ -6,11 +6,12 @@ from scripts.preprocessing import load_data, preprocess_data
 from scripts.kmeans_analysis import apply_kmeans, evaluate_kmeans
 from scripts.apriori_analysis import apply_apriori, get_strong_rules
 import streamlit.components.v1 as components
+
 # Title of the app
 st.title("Accident Data Analysis with QGIS Map Integration")
 
 # Sidebar menu
-st.sidebar.title("Admin")
+st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Choose a page", ["Upload Data", "QGIS Map"])
 
 if page == "Upload Data":
@@ -48,4 +49,4 @@ elif page == "QGIS Map":
     # Sample QGIS Map visualization using Folium (assuming data is pre-exported to GeoJSON)
     # You can replace the GeoJSON path with your own exported map data or WMS link
     st.write("Below is the embedded QGIS Map:")
-    components.iframe("/workspaces/Accident-Map-Prototype/qgis/index.html", width=1000, height=600)
+    components.iframe("http://localhost:8501/index.html", width=1000, height=600)
